@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { Button, Form } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
 import { SearchBarContext } from '../context/SearchBar';
 import fetchByFilter from '../services/data';
@@ -88,28 +89,37 @@ export default function SearchBar(props) {
   };
 
   return (
-    <nav>
-      <section>
-        <label htmlFor="search-input">
-          <input
+    <nav
+      style={
+        { display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px' }
+      }
+    >
+      <Form>
+        <Form.Label htmlFor="search-input" style={ { margin: '5px' } }>
+          <Form.Control
             id="search-input"
             type="text"
             data-testid="search-input"
             value={ input }
             onChange={ (e) => setInput(e.target.value) }
           />
-        </label>
-        <button
+        </Form.Label>
+        <Button
           data-testid="exec-search-btn"
           type="button"
           onClick={ () => handleClick() }
         >
           Buscar
-        </button>
-      </section>
-      <section>
-        <label htmlFor="ingredient">
+        </Button>
+      </Form>
+      <form
+        style={
+          { display: 'flex', flexWrap: 'wrap', justifyContent: 'center' }
+        }
+      >
+        <label htmlFor="ingredient" style={ { margin: '5px' } }>
           <input
+            style={ { margin: '5px' } }
             name="search-type"
             id="ingredient"
             type="radio"
@@ -119,8 +129,9 @@ export default function SearchBar(props) {
           />
           Ingrediente
         </label>
-        <label htmlFor="name">
+        <label htmlFor="name" style={ { margin: '5px' } }>
           <input
+            style={ { margin: '5px' } }
             name="search-type"
             id="name"
             type="radio"
@@ -130,8 +141,9 @@ export default function SearchBar(props) {
           />
           Nome
         </label>
-        <label htmlFor="first-letter">
+        <label htmlFor="first-letter" style={ { margin: '5px' } }>
           <input
+            style={ { margin: '5px' } }
             name="search-type"
             id="first-letter"
             type="radio"
@@ -141,7 +153,7 @@ export default function SearchBar(props) {
           />
           Primeira letra
         </label>
-      </section>
+      </form>
     </nav>
   );
 }

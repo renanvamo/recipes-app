@@ -40,8 +40,10 @@ export default function DoneRecipes() {
         </ToggleButtonGroup>
       </section>
       <section>
-        { filteredRecipes.length > 0 && filteredRecipes.map((recipe, index) => (
-          <CardsRecipesDone recipe={ recipe } index={ index } key={ index } />))}
+        { (filteredRecipes.length > 0 && Object.keys(filteredRecipes[0]).length !== 0)
+          ? filteredRecipes.map((recipe, index) => (
+            <CardsRecipesDone recipe={ recipe } index={ index } key={ index } />))
+          : <div>Sem receitas feitas</div>}
       </section>
     </div>
   );

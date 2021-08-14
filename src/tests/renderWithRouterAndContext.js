@@ -2,16 +2,15 @@ import React from 'react';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 import { render } from '@testing-library/react';
-import { SearchBarContext } from '../context/SearchBar';
+import { SearchBarProvider } from '../context/SearchBar';
 
-const renderWithRouterAndContext = (component, { providerProps, ...renderOptions }) => {
+const renderWithRouterAndContext = (component) => {
   const history = createMemoryHistory();
   return ({
     ...render(
-      <SearchBarContext.Provider { ...providerProps }>
+      <SearchBarProvider value={ dataValues }>
         <Router history={ history }>{ component }</Router>
-      </SearchBarContext.Provider>,
-      renderOptions,
+      </SearchBarProvider>,
     ),
     history,
   });

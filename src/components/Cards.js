@@ -10,10 +10,10 @@ export default function Cards(props) {
   const history = useHistory();
 
   let tipo = 'comidas';
-  let shortName = 'Meal';
+  let shortName = 'idMeal';
   if (type === 'thecocktaildb') {
     tipo = 'bebidas';
-    shortName = 'Drink';
+    shortName = 'idDrink';
   }
 
   useEffect(() => {
@@ -25,13 +25,13 @@ export default function Cards(props) {
       setRecipeName(recipe.strDrink);
       setSource(recipe.strDrinkThumb);
     }
-  }, [recipe.strDrink, recipe.strDrinkThumb, recipe.strMeal, recipe.strMealThumb, type]);
+  }, [recipe, type]);
 
   return (
     <Card
       style={ { margin: '20px 40px' } }
       data-testid={ `${index}-recipe-card` }
-      onClick={ () => history.push(`/${tipo}/${recipe[`id${shortName}`]}`) }
+      onClick={ () => history.push(`/${tipo}/${recipe[shortName]}`) }
     >
       <Card.Img
         variant="top"

@@ -1,19 +1,20 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Navbar } from 'react-bootstrap';
 import mealIcon from '../images/mealIcon.svg';
 import exploreIcon from '../images/exploreIcon.svg';
 import drinkIcon from '../images/drinkIcon.svg';
 
 function Footer() {
   return (
-    <footer
+    <Navbar
+      bg="light"
+      variant="light"
       style={ {
         display: 'flex',
         justifyContent: 'space-around',
         bottom: 0,
         position: 'fixed',
         width: '100%',
-        backgroundColor: 'grey',
       } }
       data-testid="footer"
     >
@@ -26,7 +27,7 @@ function Footer() {
       <a href="/bebidas">
         <img data-testid="drinks-bottom-btn" src={ drinkIcon } alt="drink icon" />
       </a>
-    </footer>
+    </Navbar>
   );
 }
 

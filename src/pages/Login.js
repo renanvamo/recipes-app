@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Button, Form, Navbar } from 'react-bootstrap';
 import { Redirect } from 'react-router';
 
 function Login() {
@@ -33,13 +34,22 @@ function Login() {
     setShouldRedirect(true);
   }
 
+  const sectionStyle = {
+    display: 'flex',
+    flexDirection: 'column',
+    margin: '70px auto',
+    width: '180px',
+  };
+
   return (
-    <main>
+    <main style={ { textAlign: 'center' } }>
       { shouldRedirect && <Redirect to="/comidas" /> }
-      <h1>Login</h1>
-      <form>
-        <label htmlFor="id">
-          <input
+      <Navbar bg="light" variant="light">
+        <h1 style={ { margin: 'auto', color: '#da0000', fontWeight: 'bold' } }>Login</h1>
+      </Navbar>
+      <Form style={ sectionStyle }>
+        <Form.Label htmlFor="id">
+          <Form.Control
             id="id"
             type="email"
             data-testid="email-input"
@@ -47,9 +57,9 @@ function Login() {
             name="email"
             onChange={ handleChange }
           />
-        </label>
-        <label htmlFor="password">
-          <input
+        </Form.Label>
+        <Form.Label htmlFor="password">
+          <Form.Control
             id="password"
             type="password"
             data-testid="password-input"
@@ -57,16 +67,16 @@ function Login() {
             name="password"
             onChange={ handleChange }
           />
-        </label>
-        <button
+        </Form.Label>
+        <Button
           type="button"
           data-testid="login-submit-btn"
           disabled={ disabled }
           onClick={ submitBtn }
         >
           Entrar
-        </button>
-      </form>
+        </Button>
+      </Form>
     </main>
   );
 }

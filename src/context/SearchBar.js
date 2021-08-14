@@ -20,6 +20,8 @@ export function SearchBarProvider({ children }) {
   // Jorge
   const [ingred, setIngred] = useState('');
 
+  console.log('search', dataValues);
+
   const value = {
     input,
     setInput,

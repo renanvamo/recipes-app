@@ -6,7 +6,6 @@ import Header from '../components/Header';
 export default function FavoriteRecipes() {
   const favoriteRecipes = JSON.parse(localStorage.getItem('favoriteRecipes'));
   const [filteredRecipes, setFilteredRecipes] = useState(favoriteRecipes);
-  console.log(favoriteRecipes);
   const [type, setType] = useState('all');
 
   useEffect(() => {

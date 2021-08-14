@@ -29,7 +29,7 @@ export default function CardsList(props) {
     // console.log('render 3', renderArray);
     return (
       <div
-        style={ { marginTop: '100px' } }
+        style={ { marginTop: '20px' } }
       >
         { renderArray.slice(0, MAX_CARDS).map((eachRecipe, index) => (<Cards
           recipe={ eachRecipe }

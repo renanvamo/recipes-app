@@ -21,11 +21,8 @@ export default function FiltersBar(props) {
   } = useContext(SearchBarContext);
 
   const onClickFilter = (clickedCategory) => {
-    if (clickedCategory === filter) {
-      setFilter('');
-    } else {
-      setFilter(clickedCategory);
-    }
+    const result = clickedCategory === filter ? '' : clickedCategory;
+    setFilter(result);
   };
 
   useEffect(() => {

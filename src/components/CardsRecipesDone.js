@@ -10,13 +10,9 @@ export default function CardsRecipesDone(props) {
   const { tags, alcoholicOrNot, area } = recipe;
   const history = useHistory();
   const firstTags = tags.filter((_tag, ind) => ind < 2);
-
   const href = window.location.origin;
-  const getPath = () => (
-    type === 'comida' ? `${href}/comidas/${id}` : `${href}/bebidas/${id}`);
 
-  const onClickTitleOrImage = () => (
-    type === 'comida' ? history.push(`/comidas/${id}`) : history.push(`/bebidas/${id}`));
+  const onClickTitleOrImage = () => history.push(`/${type}s/${id}`);
 
   const card = {
     display: 'flex',
@@ -63,7 +59,7 @@ export default function CardsRecipesDone(props) {
           </Card.Title>
           <ButtonShare
             testid={ `${index}-horizontal-share-btn` }
-            path={ getPath() }
+            path={ `${href}/${type}s/${id}` }
           />
         </div>
         <Card.Text>
