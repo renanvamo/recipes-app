@@ -1,55 +1,62 @@
-// import React from 'react';
-// import userEvent from '@testing-library/user-event';
-// import App from '../App';
-// import renderWithRouterAndContext from './renderWithRouterAndContext';
-// import '@testing-library/jest-dom/extend-expect';
+import React from 'react';
+import userEvent from '@testing-library/user-event';
+import App from '../App';
+import renderWithRouterAndContext from './renderWithRouterAndContext';
+import '@testing-library/jest-dom/extend-expect';
 
-// const EMAIL_INPUT = 'alguem@alguem.com';
-// const PASSWORD_INPUT = '1234567';
+const EMAIL_INPUT = 'alguem@alguem.com';
+const PASSWORD_INPUT = '1234567';
+const profileBtn = 'profile-top-btn';
+const pageTitle = 'page-title';
+const searchTop = 'search-top-btn';
 
-// describe('Teste do componente Header os data-testids `profile-top-btn`, `page-title` e `search-top-btn`', () => {
-//   test('O header tem os ícones corretos na tela de principal de receitas de comidas', () => {
-//     const { getByText, getByTestId, history } = renderWithRouterAndContext(<App />);
+const desc = 'Teste do componente Header os data-testids';
+const test1 = 'O header na tela de principal de receitas de comidas';
+const test3 = 'O header na tela de principal de receitas de bebidas';
 
-//     userEvent.type(getByTestId('email-input'), EMAIL_INPUT);
-//     userEvent.type(getByTestId('password-input'), PASSWORD_INPUT);
-//     userEvent.click(getByTestId('login-submit-btn'));
+describe(desc, () => {
+  test(test1, () => {
+    const { getByText, getByTestId } = renderWithRouterAndContext(<App />);
 
-//     expect(getByText('Explorar Comidas')).toBeInTheDocument();
+    userEvent.type(getByTestId('email-input'), EMAIL_INPUT);
+    userEvent.type(getByTestId('password-input'), PASSWORD_INPUT);
+    userEvent.click(getByTestId('login-submit-btn'));
 
-//     expect(getByTestId('profile-top-btn')).toBeInTheDocument();
-//     expect(getByTestId('page-title')).toBeInTheDocument();
-//     expect(getByTestId('search-top-btn')).toBeInTheDocument();
-//   });
+    expect(getByText('Explorar Comidas')).toBeInTheDocument();
 
-//   test('Não tem Header na página Login', async () => {
-//     const { getByText, getByTestId, getAllByTestId, queryAllByTestId, history } = renderWithRouterAndContext(<App />);
+    expect(getByTestId(profileBtn)).toBeInTheDocument();
+    expect(getByTestId(pageTitle)).toBeInTheDocument();
+    expect(getByTestId(searchTop)).toBeInTheDocument();
+  });
 
-//     // userEvent.type(getByTestId('email-input'), EMAIL_INPUT);
-//     // userEvent.type(getByTestId('password-input'), PASSWORD_INPUT);
-//     // userEvent.click(getByTestId('login-submit-btn'));
+  test('Não tem Header na página Login', async () => {
+    const { getByText, queryAllByTestId } = renderWithRouterAndContext(<App />);
 
-//     expect(getByText('Login')).toBeInTheDocument();
+    // userEvent.type(getByTestId('email-input'), EMAIL_INPUT);
+    // userEvent.type(getByTestId('password-input'), PASSWORD_INPUT);
+    // userEvent.click(getByTestId('login-submit-btn'));
 
-//     expect(queryAllByTestId('profile-top-btn')).toHaveLength(0);
-//     expect(queryAllByTestId('page-title')).toHaveLength(0);
-//     expect(queryAllByTestId('search-top-btn')).toHaveLength(0);
-//     // Para utilizar getBy é necessário utilizar async await
-//     // https://testing-library.com/docs/guide-disappearance
-//   });
+    expect(getByText('Login')).toBeInTheDocument();
 
-//   test('O header tem os ícones corretos na tela de principal de receitas de bebidas', () => {
-//     const { getByText, getByTestId, history } = renderWithRouterAndContext(<App />);
+    expect(queryAllByTestId(profileBtn)).toHaveLength(0);
+    expect(queryAllByTestId(pageTitle)).toHaveLength(0);
+    expect(queryAllByTestId(searchTop)).toHaveLength(0);
+    // Para utilizar getBy é necessário utilizar async await
+    // https://testing-library.com/docs/guide-disappearance
+  });
 
-//     userEvent.type(getByTestId('email-input'), EMAIL_INPUT);
-//     userEvent.type(getByTestId('password-input'), PASSWORD_INPUT);
-//     userEvent.click(getByTestId('login-submit-btn'));
-//     userEvent.click(getByTestId(''));
+  test(test3, () => {
+    const { getByText, getByTestId } = renderWithRouterAndContext(<App />);
 
-//     expect(getByText('Explorar Comidas')).toBeInTheDocument();
+    userEvent.type(getByTestId('email-input'), EMAIL_INPUT);
+    userEvent.type(getByTestId('password-input'), PASSWORD_INPUT);
+    userEvent.click(getByTestId('login-submit-btn'));
+    userEvent.click(getByTestId(''));
 
-//     expect(getByTestId('profile-top-btn')).toBeInTheDocument();
-//     expect(getByTestId('page-title')).toBeInTheDocument();
-//     expect(getByTestId('search-top-btn')).toBeInTheDocument();
-//   });
-// });
+    expect(getByText('Explorar Comidas')).toBeInTheDocument();
+
+    expect(getByTestId(profileBtn)).toBeInTheDocument();
+    expect(getByTestId(pageTitle)).toBeInTheDocument();
+    expect(getByTestId(searchTop)).toBeInTheDocument();
+  });
+});

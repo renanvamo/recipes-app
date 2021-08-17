@@ -7,20 +7,20 @@ import MutationObserver from '@sheerun/mutationobserver-shim';
 
 window.MutationObserver = MutationObserver;
 
-// window.matchMedia = window.matchMedia || function () {
-//   return {
-//     matches: false,
-//     addListener: function () {},
-//     removeListener: function () {},
-//   };
-// };
+window.matchMedia = window.matchMedia || function () {
+  return {
+    matches: false,
+    addListener: (() => {}),
+    removeListener: (() => {}),
+  };
+};
 
 // https://github.com/akiran/react-slick/issues/742
 
-window.matchMedia = jest.fn().mockImplementation((query) => ({
-  matches: false,
-  media: query,
-  onchange: null,
-  addListener: jest.fn(),
-  removeListener: jest.fn(),
-}));
+// window.matchMedia = jest.fn().mockImplementation((query) => ({
+//   matches: false,
+//   media: query,
+//   onchange: null,
+//   addListener: jest.fn(),
+//   removeListener: jest.fn(),
+// }));
