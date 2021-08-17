@@ -13,7 +13,6 @@ export function SearchBarProvider({ children }) {
   const [path, setPath] = useState();
   const [recipeType, setRecipeType] = useState();
   const [newSearch, setNewSearch] = useState(false);
-  // Ana
   const [dataList, setDataList] = useState([]);
   const [categories, setCategories] = useState([]);
   const [filter, setFilter] = useState('');

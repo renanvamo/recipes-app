@@ -8,12 +8,17 @@ export default function DoneRecipes() {
   const parsedDoneRecipe = doneRecipes ? JSON.parse(doneRecipes) : [];
   const [filteredRecipes, setFilteredRecipes] = useState(parsedDoneRecipe);
   const [type, setType] = useState('');
+
   useEffect(() => {
     if (doneRecipes) {
+      console.log(parsedDoneRecipe);
       const newFilteredRecipes = type
         ? [...parsedDoneRecipe.filter((recipe) => recipe.type === type)]
         : [...parsedDoneRecipe];
       setFilteredRecipes(newFilteredRecipes);
+      console.log(filteredRecipes);
+      console.log(type);
+      console.log(newFilteredRecipes);
     }
   }, [type]);
 

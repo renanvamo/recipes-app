@@ -7,18 +7,17 @@ import Foods from './pages/foods/Foods';
 import FoodExplorer from './pages/foods/FoodExplorer';
 import FoodExplorerByIngredients from './pages/foods/FoodExplorerByIngredients';
 import FoodExplorerByCountry from './pages/foods/FoodExplorerByCountry';
-import FoodInProgress from './pages/foods/FoodInProgress';
 import FoodRecipes from './pages/foods/FoodRecipes';
 import Drinks from './pages/drinks/Drinks';
 import DrinkExplorer from './pages/drinks/DrinkExplorer';
 import DrinkExplorerByIngredients from './pages/drinks/DrinkExplorerByIngredients';
-import DrinkInProgress from './pages/drinks/DrinkInProgress';
 import DrinkRecipes from './pages/drinks/DrinkRecipes';
 import Profile from './pages/Profile';
 import DoneRecipes from './pages/DoneRecipes';
 import FavoriteRecipes from './pages/FavoriteRecipes';
 import Explorer from './pages/Explorer';
 import NotFound from './pages/NotFound';
+import RecipeInProgress from './pages/RecipeInProgress';
 
 function App() {
   const pathFoods = '/explorar/comidas/ingredientes';
@@ -43,8 +42,8 @@ function App() {
       <Route exact path="/perfil" component={ Profile } />
       <Route exact path="/receitas-feitas" component={ DoneRecipes } />
       <Route exact path="/receitas-favoritas" component={ FavoriteRecipes } />
-      <Route exact path="/comidas/:id/in-progress" component={ FoodInProgress } />
-      <Route exact path="/bebidas/:id/in-progress" component={ DrinkInProgress } />
+      <Route exact path="/comidas/:id/in-progress" component={ RecipeInProgress } />
+      <Route exact path="/bebidas/:id/in-progress" component={ RecipeInProgress } />
       {/* </SearchBarProvider> */}
       <Route path="*" component={ NotFound } />
     </Switch>

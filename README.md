@@ -245,8 +245,6 @@ https://www.figma.com/file/WatDxtKl7g54QxhDi9qdbq/App-Receitas?node-id=0%3A1
 
 Lembre-se de escrever testes unitários e sinta-se livre para alterar a UI, só respeite os atributos `data-testid`, eles serão usados na correção do exercício.
 
-Você pode ler mais sobre atributos para testes [nesse link](https://www.eduardopedroso.com.br/?p=494)
-
 #### ⚠️ Lembre-se de escrever testes unitários e sinta-se livre para alterar a UI, só respeite os atributos `data-testid`, eles serão usados na correção do exercício.
 
 #### ⚠️ Para ver os comentários sobre cada componente, basta clicar no ícone de comentários no Figma (lado esquerdo superior).
@@ -356,7 +354,7 @@ Projeto em grupo.
 
 Serão dez dias de projeto.
 
-Data de entrega para avaliação final do projeto: `DD/MM/YYYY - 14:00h`.
+Data de entrega para avaliação final do projeto: `13/08/2021 - 14:00h`.
 
 ---
 
