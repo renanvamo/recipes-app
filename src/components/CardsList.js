@@ -58,7 +58,7 @@ export default function CardsList(props) {
     );
   }
 
-  return <div>Não há itens</div>;
+  return <div>Carregando itens...</div>;
 }
 
 CardsList.propTypes = {

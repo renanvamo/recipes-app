@@ -1,30 +1,31 @@
 import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { InProgressContext } from '../../context/InProgress';
+import { InProgressContext } from '../../context/RecipeInProgress';
 
 export default function IngredientsList(props) {
   const { recipe } = props;
-  const recipeId = window.location.pathname.split('/')[2];
-
   const {
+    setLocalStorage,
     ingredientsArray,
     setIngredientsArray,
     measurementsArray,
     setMeasurementsArray,
-    saveInLocalStorage,
+    updateLocalStorage,
     checkSavedItens,
-    setLocalStorage,
     setFinishButton,
   } = useContext(InProgressContext);
 
+  useEffect(setLocalStorage, [setLocalStorage]);
+
   useEffect(() => {
     setFinishButton();
-  }, [checkSavedItens, setFinishButton]);
+  }, [setFinishButton]);
 
   useEffect(() => {
     const getItems = (searchedKey) => Object.entries(recipe).filter(
       (value) => value[0].includes(searchedKey) && value[1],
     ).map((item) => item[1]);
+
     if (recipe) {
       const ingredients = getItems('Ingredient');
       const measures = getItems('Measure');
@@ -32,11 +33,6 @@ export default function IngredientsList(props) {
       setMeasurementsArray(measures);
     }
   }, [recipe, setIngredientsArray, setMeasurementsArray]);
-
-  useEffect(() => {
-    const obj = setLocalStorage(recipeId);
-    localStorage.setItem('cocktails', JSON.stringify(obj));
-  }, [recipeId, setLocalStorage]);
 
   return (
     <section>
@@ -48,7 +44,7 @@ export default function IngredientsList(props) {
               checked={ checkSavedItens(ingredient) }
               id={ `id${index}` }
               name="ingredient"
-              onChange={ (e) => { saveInLocalStorage(e); setFinishButton(); } }
+              onClick={ (e) => { updateLocalStorage(e); } }
               key={ index }
               type="checkbox"
               value={ ingredient }
