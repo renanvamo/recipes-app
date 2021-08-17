@@ -7,7 +7,7 @@ const EMAIL_INPUT = 'alguem@alguem.com';
 const PASSWORD_INPUT = '1234567';
 
 describe('Teste de página não encontrada', () => {
-  test('teste 1', () => {
+  test('Not Found page - 1', () => {
     const { getByText, getByTestId, history } = renderWithRouterAndContext(<App />);
     userEvent.type(getByTestId('email-input'), EMAIL_INPUT);
     userEvent.type(getByTestId('password-input'), PASSWORD_INPUT);
@@ -18,7 +18,7 @@ describe('Teste de página não encontrada', () => {
     expect(getByText('Not Found')).toBeInTheDocument();
   });
 
-  test('teste 2', () => {
+  test('Not Found page - 2', () => {
     const { getByText, history } = renderWithRouterAndContext(<App />);
     history.push('/explorer/anyone');
     expect(getByText('Not Found')).toBeInTheDocument();
