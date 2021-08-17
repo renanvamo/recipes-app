@@ -7,16 +7,11 @@ export default function Profile() {
   const user = localStorage.getItem('user');
   const email = user ? JSON.parse(user).email : 'E-mail não encontrado';
   const history = useHistory();
-  const sectionStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    textAlign: 'center',
-    width: '180px',
-  };
+
   return (
     <div>
       <Header title="Perfil" />
-      <section style={ sectionStyle }>
+      <section className="container-buttons">
         <h5 data-testid="profile-email">{ email }</h5>
         <button
           type="button"

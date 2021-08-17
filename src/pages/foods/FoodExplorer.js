@@ -20,18 +20,16 @@ export default function FoodExplorer() {
     getRandomFood();
   }, []);
 
-  const buttonStyle = { display: 'block', margin: '10px auto', width: '200px' };
-
   return (
     <>
       <SearchBarProvider>
         <Header title="Explorar Comidas" />
       </SearchBarProvider>
-      <section style={ { marginTop: '50px' } }>
+      <section className="container-buttons">
         <ByIngredient />
         <Button
-          style={ buttonStyle }
-          variant="primary"
+          className="button-style"
+          variant="dark"
           data-testid="explore-by-area"
           type="button"
           onClick={ () => history.push('/explorar/comidas/area') }
@@ -39,8 +37,8 @@ export default function FoodExplorer() {
           Por Local de Origem
         </Button>
         <Button
-          style={ buttonStyle }
-          variant="primary"
+          className="button-style"
+          variant="dark"
           data-testid="explore-surprise"
           type="button"
           onClick={ () => history.push(`/comidas/${idRandomFood}`) }

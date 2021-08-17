@@ -7,11 +7,10 @@ import drinkIcon from '../images/drinkIcon.svg';
 function Footer() {
   return (
     <Navbar
-      bg="light"
-      variant="light"
       style={ {
         display: 'flex',
         justifyContent: 'space-around',
+        background: '#F76C05',
         bottom: 0,
         position: 'fixed',
         width: '100%',

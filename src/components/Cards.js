@@ -29,7 +29,7 @@ export default function Cards(props) {
 
   return (
     <Card
-      style={ { margin: '20px 40px' } }
+      style={ { margin: '20px auto', width: '304px', boxShadow: '0 0 5px' } }
       data-testid={ `${index}-recipe-card` }
       onClick={ () => history.push(`/${tipo}/${recipe[shortName]}`) }
     >
@@ -38,15 +38,13 @@ export default function Cards(props) {
         src={ source }
         alt={ recipeName }
         data-testid={ `${index}-card-img` }
-        width="50px"
+        objectFit="cover"
       />
-      <Card.Body>
-        <Card.Title
-          data-testid={ `${index}-card-name` }
-        >
-          { recipeName }
-        </Card.Title>
-
+      <Card.Body
+        style={ { textAlign: 'center', fontSize: '20px', fontWeight: 'bold' } }
+        data-testid={ `${index}-card-name` }
+      >
+        { recipeName }
       </Card.Body>
     </Card>
   );

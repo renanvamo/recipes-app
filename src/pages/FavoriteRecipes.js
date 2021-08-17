@@ -31,6 +31,7 @@ export default function FavoriteRecipes() {
     <>
       <Header title="Receitas Favoritas" search={ false } />
       <ToggleButtonGroup
+        className="container-buttons"
         type="radio"
         name="type"
         value={ type }
