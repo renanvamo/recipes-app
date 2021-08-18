@@ -4,7 +4,6 @@ import { Button } from 'react-bootstrap';
 import Header from '../../components/Header';
 import { SearchBarProvider } from '../../context/SearchBar';
 import Footer from '../../components/Footer';
-import ByIngredient from '../../components/ByIngredient';
 import fetchByFilter from '../../services/data';
 
 export default function DrinkExplorer() {
@@ -26,7 +25,15 @@ export default function DrinkExplorer() {
         <Header title="Explorar Bebidas" />
       </SearchBarProvider>
       <section className="container-buttons">
-        <ByIngredient />
+        <Button
+          className="button-style"
+          variant="dark"
+          type="button"
+          onClick={ () => history.push('/explorar/bebidas/ingredientes') }
+          data-testid="explore-by-ingredient"
+        >
+          Por Ingredientes
+        </Button>
         <Button
           variant="dark"
           className="button-style"
