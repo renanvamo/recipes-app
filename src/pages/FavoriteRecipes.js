@@ -29,21 +29,36 @@ export default function FavoriteRecipes() {
 
   return (
     <>
-      <Header title="Receitas Favoritas" search={ false } />
+      <Header title="Receitas Favoritas" className="header-favor" />
       <ToggleButtonGroup
-        className="container-buttons"
+        className="buttons-filter-favor"
         type="radio"
         name="type"
         value={ type }
         onChange={ handleChange }
       >
-        <ToggleButton name="type" data-testid="filter-by-all-btn" value="all">
+        <ToggleButton
+          name="type"
+          data-testid="filter-by-all-btn"
+          value="all"
+          variant="dark"
+        >
           All
         </ToggleButton>
-        <ToggleButton name="type" data-testid="filter-by-food-btn" value="comida">
+        <ToggleButton
+          name="type"
+          data-testid="filter-by-food-btn"
+          value="comida"
+          variant="dark"
+        >
           Food
         </ToggleButton>
-        <ToggleButton name="type" data-testid="filter-by-drink-btn" value="bebida">
+        <ToggleButton
+          name="type"
+          data-testid="filter-by-drink-btn"
+          value="bebida"
+          variant="dark"
+        >
           Drink
         </ToggleButton>
       </ToggleButtonGroup>

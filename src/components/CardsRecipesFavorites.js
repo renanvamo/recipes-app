@@ -12,14 +12,21 @@ function CardsRecipesFavorites(props) {
 
   const card = {
     display: 'flex',
-    flexWrap: 'nowrap',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
     padding: '2px',
-    margin: '10px',
     border: '1px solid #e6e6e6',
+    margin: '20px auto',
+    float: 'none',
+    marginBottom: '10px',
+    width: '304px',
+    boxShadow: '0 0 5px',
   };
+
   const cardTitle = {
     display: 'flex',
-    justifyContent: 'space-between',
+    textAlign: 'center',
+    justifyContent: 'space-around',
     width: '160px',
   };
 
@@ -34,7 +41,7 @@ function CardsRecipesFavorites(props) {
   return (
     <div style={ card }>
       <Card.Img
-        style={ { width: '130px' } }
+        variant="top"
         data-testid={ `${index}-horizontal-image` }
         src={ image }
         alt={ name }
@@ -43,7 +50,7 @@ function CardsRecipesFavorites(props) {
         onClick={ onClickTitleOrImage }
         onKeyPress={ onClickTitleOrImage }
       />
-      <Card.Body style={ { width: '160px' } }>
+      <Card.Body>
         <Card.Text
           data-testid={ `${index}-horizontal-top-text` }
           onClick={ onClickTitleOrImage }
@@ -54,6 +61,7 @@ function CardsRecipesFavorites(props) {
         </Card.Text>
         <div style={ cardTitle }>
           <Card.Title
+            style={ { fontWeight: 'bold' } }
             data-testid={ `${index}-horizontal-name` }
             role="button"
             tabIndex="0"
@@ -69,6 +77,7 @@ function CardsRecipesFavorites(props) {
           <button
             type="button"
             onClick={ () => handleDisfavor(id) }
+            style={ { background: 'none', opacity: 'none', border: 'none' } }
           >
             <img
               src={ blackHeartIcon }

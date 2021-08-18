@@ -18,8 +18,10 @@ export default function CardsRecipesDone(props) {
     display: 'flex',
     flexWrap: 'nowrap',
     padding: '2px',
-    margin: '10px',
     border: '1px solid #e6e6e6',
+    margin: '0 auto', /* Added */
+    float: 'none', /* Added */
+    marginBottom: '10px', /* Added */
   };
   const cardTitle = {
     display: 'flex',
