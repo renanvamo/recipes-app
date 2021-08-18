@@ -32,7 +32,7 @@ export default function FoodExplorerByCountry() {
   };
 
   return (
-    <label htmlFor="explore-by-area">
+    <label htmlFor="explore-by-area" className="container-explore-by-area">
       <select
         data-testid="explore-by-area-dropdown"
         id="explore-by-area"

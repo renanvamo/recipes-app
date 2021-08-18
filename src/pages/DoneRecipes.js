@@ -11,14 +11,10 @@ export default function DoneRecipes() {
 
   useEffect(() => {
     if (doneRecipes) {
-      console.log(parsedDoneRecipe);
       const newFilteredRecipes = type
         ? [...parsedDoneRecipe.filter((recipe) => recipe.type === type)]
         : [...parsedDoneRecipe];
       setFilteredRecipes(newFilteredRecipes);
-      console.log(filteredRecipes);
-      console.log(type);
-      console.log(newFilteredRecipes);
     }
   }, [type]);
 
@@ -26,7 +22,7 @@ export default function DoneRecipes() {
   return (
     <div>
       <Header title="Receitas Feitas" search={ false } />
-      <section style={ { textAlign: 'center' } }>
+      <section className="container-buttons">
         <ToggleButtonGroup
           type="radio"
           name="type"

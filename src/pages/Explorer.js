@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { SearchBarProvider } from '../context/SearchBar';
@@ -11,20 +12,26 @@ export default function Explorer() {
       <SearchBarProvider>
         <Header title="Explorar" />
       </SearchBarProvider>
-      <button
-        type="button"
-        data-testid="explore-food"
-        onClick={ () => history.push('/explorar/comidas') }
-      >
-        Explorar Comidas
-      </button>
-      <button
-        type="button"
-        data-testid="explore-drinks"
-        onClick={ () => history.push('/explorar/bebidas') }
-      >
-        Explorar Bebidas
-      </button>
+      <section className="container-buttons">
+        <Button
+          variant="dark"
+          className="button-style"
+          type="button"
+          data-testid="explore-food"
+          onClick={ () => history.push('/explorar/comidas') }
+        >
+          Explorar Comidas
+        </Button>
+        <Button
+          variant="dark"
+          className="button-style"
+          type="button"
+          data-testid="explore-drinks"
+          onClick={ () => history.push('/explorar/bebidas') }
+        >
+          Explorar Bebidas
+        </Button>
+      </section>
       <Footer />
     </>
   );

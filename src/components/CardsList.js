@@ -13,23 +13,19 @@ export default function CardsList(props) {
   }, [dataValues]);
 
   useEffect(() => {
-    // console.log('render 2', dataValues);
-    // console.log('cardlist', ingredient);
     const getRecipesByCategory = async () => {
       const urlToFetch = `https://www.${fetchType}.com/api/json/v1/1/filter.php?i=${ingredient}`;
       const recipesFromApi = await fetchByFilter(urlToFetch);
       const newRecipes = Object.values(recipesFromApi)[0];
-      // console.log('render', ingredient);
       setRenderArray(newRecipes);
     };
     getRecipesByCategory();
   }, [dataValues, ingredient]);
 
   if (ingredient && ingredient.length > 0) {
-    // console.log('render 3', renderArray);
     return (
       <div
-        style={ { marginTop: '20px' } }
+        style={ { marginTop: '175px' } }
       >
         { renderArray.slice(0, MAX_CARDS).map((eachRecipe, index) => (<Cards
           recipe={ eachRecipe }
@@ -42,10 +38,9 @@ export default function CardsList(props) {
     );
   }
   if (dataValues && dataValues.length > 0) {
-    // console.log('render 4', renderArray);
     return (
       <div
-        style={ { marginTop: '100px' } }
+        style={ { marginTop: '175px' } }
       >
         { dataValues.slice(0, MAX_CARDS).map((eachRecipe1, index1) => (<Cards
           recipe={ eachRecipe1 }

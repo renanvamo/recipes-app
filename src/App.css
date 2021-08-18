@@ -1,3 +1,19 @@
+* {
+  max-height: 640px;
+  max-width: 360px;
+}
+
+body {
+  background-color: #ff900d;
+}
+
+.container-login {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  width: 180px;
+}
+
 .meals {
   align-items: center;
   background: #0fa36b;
@@ -15,19 +31,56 @@
   max-height: 80vh;
 }
 
-/*
-#iceLeft {
-  animation: clink .8s infinite ease;
-  opacity: 0.6;
-  transform-origin: 36px 66px;
+.container-header-filters {
+  background: #ff900d;
+  padding: 0 0 10px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
 
-#iceRight {
-  animation: clink .8s .2s infinite ease;
-  opacity: 0.6;
-  transform-origin: 60px 78px;
+.container-header {
+  align-items: center;
+  background: #f76c05;
+  display: flex;
+  padding: 10px;
+  width: 100%;
 }
-*/
+
+.container-buttons-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.container-buttons {
+  display: block;
+  margin-top: 100px;
+}
+
+.button-style {
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+}
+
+/* stackoverflow https://bityli.com/3bN5N */
+.button-filter {
+  font-size: 15px;
+  height: 40px;
+  line-height: 1em;
+  margin: 1px;
+  max-height: 3em;
+  width: 100px;
+  word-wrap: break-word;
+}
+
+.container-explore-by-area {
+  margin-top: 70px;
+}
+
 
 .meals > .logo {
   animation: shake 1.5s infinite ease;

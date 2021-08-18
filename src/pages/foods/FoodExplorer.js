@@ -3,7 +3,6 @@ import { useHistory } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import Header from '../../components/Header';
 import { SearchBarProvider } from '../../context/SearchBar';
-import ByIngredient from '../../components/ByIngredient';
 import Footer from '../../components/Footer';
 import fetchByFilter from '../../services/data';
 
@@ -20,18 +19,24 @@ export default function FoodExplorer() {
     getRandomFood();
   }, []);
 
-  const buttonStyle = { display: 'block', margin: '10px auto', width: '200px' };
-
   return (
     <>
       <SearchBarProvider>
         <Header title="Explorar Comidas" />
       </SearchBarProvider>
-      <section style={ { marginTop: '50px' } }>
-        <ByIngredient />
+      <section className="container-buttons">
         <Button
-          style={ buttonStyle }
-          variant="primary"
+          className="button-style"
+          variant="dark"
+          type="button"
+          onClick={ () => history.push('/explorar/comidas/ingredientes') }
+          data-testid="explore-by-ingredient"
+        >
+          Por Ingredientes
+        </Button>
+        <Button
+          className="button-style"
+          variant="dark"
           data-testid="explore-by-area"
           type="button"
           onClick={ () => history.push('/explorar/comidas/area') }
@@ -39,8 +44,8 @@ export default function FoodExplorer() {
           Por Local de Origem
         </Button>
         <Button
-          style={ buttonStyle }
-          variant="primary"
+          className="button-style"
+          variant="dark"
           data-testid="explore-surprise"
           type="button"
           onClick={ () => history.push(`/comidas/${idRandomFood}`) }
