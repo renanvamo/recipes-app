@@ -54,7 +54,7 @@ export default function CardsRecipesDone(props) {
         </Card.Text>
         <div style={ cardTitle }>
           <Card.Title
-            style={ { fontWeight: 'bold' } }
+            style={ { fontWeight: 'bold', margin: '10px 70px' } }
             data-testid={ `${index}-horizontal-name` }
             role="button"
             tabIndex="0"
