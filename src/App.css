@@ -8,15 +8,15 @@ body {
 }
 
 .card-favor-and-done {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 2px;
-  margin: 20px auto;
-  float: none;
-  width: 304px;
   box-shadow: 0 0 5px;
   background-color: white;
+  display: flex;
+  flex-direction: column;
+  float: none;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 2px;
+  width: 304px;
 };
 
 .container-login {
@@ -77,7 +77,6 @@ header {
   padding: 20px;
 }
 
-
-.meals > .logo {
+meals > .logo {
   animation: shake 1.5s infinite ease;
-}
+} 

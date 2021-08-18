@@ -29,7 +29,7 @@ export default function FavoriteRecipes() {
 
   return (
     <>
-      <Header title="Receitas Favoritas" className="header-favor" />
+      <Header title="Receitas Favoritas"/>
       <ToggleButtonGroup
         className="buttons-filter-favor"
         type="radio"
