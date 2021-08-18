@@ -4,7 +4,7 @@
 }
 
 body {
-  background-color: #FF900D;
+  background-color: #ff900d;
 }
 
 .container-login {
@@ -32,8 +32,8 @@ body {
 }
 
 .container-header-filters {
-  background: #FF900D;
-  padding: 0 0 10px 0;
+  background: #ff900d;
+  padding: 0 0 10px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -42,7 +42,7 @@ body {
 
 .container-header {
   align-items: center;
-  background: #F76C05;
+  background: #f76c05;
   display: flex;
   padding: 10px;
   width: 100%;
@@ -66,7 +66,7 @@ body {
   width: 200px;
 }
 
-/* https://stackoverflow.com/questions/45180582/is-it-possible-to-use-css-to-shrink-text-to-automatically-fit-the-size-of-the-di/45181041 */
+/* stackoverflow https://bityli.com/3bN5N */
 .button-filter {
   font-size: 15px;
   height: 40px;
