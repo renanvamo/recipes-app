@@ -10,18 +10,18 @@ function CardsRecipesFavorites(props) {
   const { id, name, image } = recipe;
   const history = useHistory();
 
-  const card = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    padding: '2px',
-    border: '1px solid #e6e6e6',
-    margin: '20px auto',
-    float: 'none',
-    marginBottom: '10px',
-    width: '304px',
-    boxShadow: '0 0 5px',
-  };
+  // const card = {
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   justifyContent: 'space-around',
+  //   padding: '2px',
+  //   border: '1px solid #e6e6e6',
+  //   margin: '20px auto',
+  //   float: 'none',
+  //   marginBottom: '10px',
+  //   width: '304px',
+  //   boxShadow: '0 0 5px',
+  // };
 
   const cardTitle = {
     display: 'flex',
@@ -39,7 +39,7 @@ function CardsRecipesFavorites(props) {
     recipe.type === 'comida' ? `${href}/comidas/${id}` : `${href}/bebidas/${id}`);
 
   return (
-    <div style={ card }>
+    <div className="card-favor-and-done">
       <Card.Img
         variant="top"
         data-testid={ `${index}-horizontal-image` }
@@ -61,7 +61,7 @@ function CardsRecipesFavorites(props) {
         </Card.Text>
         <div style={ cardTitle }>
           <Card.Title
-            style={ { fontWeight: 'bold' } }
+            style={ { fontWeight: 'bold', margin: '10px 70px' } }
             data-testid={ `${index}-horizontal-name` }
             role="button"
             tabIndex="0"

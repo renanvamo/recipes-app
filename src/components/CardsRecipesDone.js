@@ -14,20 +14,13 @@ export default function CardsRecipesDone(props) {
 
   const onClickTitleOrImage = () => history.push(`/${type}s/${id}`);
 
-  const card = {
-    display: 'flex',
-    flexWrap: 'nowrap',
-    padding: '2px',
-    border: '1px solid #e6e6e6',
-    margin: '0 auto', /* Added */
-    float: 'none', /* Added */
-    marginBottom: '10px', /* Added */
-  };
   const cardTitle = {
     display: 'flex',
-    justifyContent: 'space-between',
+    textAlign: 'center',
+    justifyContent: 'space-around',
     width: '160px',
   };
+
   const cardTags = {
     background: '#e6e6e6',
     borderRadius: '5px',
@@ -37,9 +30,9 @@ export default function CardsRecipesDone(props) {
   };
 
   return (
-    <div style={ card }>
+    <div className="card-favor-and-done">
       <Card.Img
-        style={ { width: '130px' } }
+        variant="top"
         data-testid={ `${index}-horizontal-image` }
         src={ image }
         alt="Foto da receita"
@@ -49,8 +42,19 @@ export default function CardsRecipesDone(props) {
         onKeyPress={ onClickTitleOrImage }
       />
       <Card.Body style={ { width: '160px' } }>
+        <Card.Text>
+          <p data-testid={ `${index}-horizontal-top-text` }>
+            { area ? `${area} - ${category}` : alcoholicOrNot }
+          </p>
+          <p style={ { fontSize: '13px' } }>
+            Feita em:
+            { ' ' }
+            <span data-testid={ `${index}-horizontal-done-date` }>{ doneDate }</span>
+          </p>
+        </Card.Text>
         <div style={ cardTitle }>
           <Card.Title
+            style={ { fontWeight: 'bold' } }
             data-testid={ `${index}-horizontal-name` }
             role="button"
             tabIndex="0"
@@ -64,17 +68,7 @@ export default function CardsRecipesDone(props) {
             path={ `${href}/${type}s/${id}` }
           />
         </div>
-        <Card.Text>
-          <p data-testid={ `${index}-horizontal-top-text` }>
-            { area ? `${area} - ${category}` : alcoholicOrNot }
-          </p>
-          <p style={ { fontSize: '13px' } }>
-            Feita em:
-            { ' ' }
-            <span data-testid={ `${index}-horizontal-done-date` }>{ doneDate }</span>
-          </p>
-        </Card.Text>
-        <div style={ { display: 'flex', flexWrap: 'wrap', width: '160px' } }>
+        <div style={ cardTitle }>
           { tags && firstTags.map((tag) => (
             <span
               style={ cardTags }

@@ -28,14 +28,30 @@ export default function DoneRecipes() {
           name="type"
           value={ type }
           onChange={ handleChange }
+          className="buttons-filter-favor"
         >
-          <ToggleButton name="type" data-testid="filter-by-all-btn" value="">
+          <ToggleButton
+            name="type"
+            data-testid="filter-by-all-btn"
+            value=""
+            variant="dark"
+          >
             All
           </ToggleButton>
-          <ToggleButton name="type" data-testid="filter-by-food-btn" value="comida">
+          <ToggleButton
+            name="type"
+            data-testid="filter-by-food-btn"
+            value="comida"
+            variant="dark"
+          >
             Food
           </ToggleButton>
-          <ToggleButton name="type" data-testid="filter-by-drink-btn" value="bebida">
+          <ToggleButton
+            name="type"
+            data-testid="filter-by-drink-btn"
+            value="bebida"
+            variant="dark"
+          >
             Drink
           </ToggleButton>
         </ToggleButtonGroup>
