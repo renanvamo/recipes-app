@@ -97,10 +97,6 @@ body {
   z-index: 1;
 }
 
-/* .container-explore-by-area-buttons {
-  margin: 10px;
-} */
-
 .meals > .logo {
   animation: shake 1.5s infinite ease;
   color: aliceblue;
