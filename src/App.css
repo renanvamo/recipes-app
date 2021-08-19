@@ -1,8 +1,14 @@
 body {
   background-color: #ff900d;
-  max-height: 640px;
+  min-height: 640px;
+}
 
-  /* max-width: 360px; */
+.button {
+  background-color: #4b2c0d;
+}
+
+.transition {
+  transition: 0.5s;
 }
 
 .container-login {

@@ -65,7 +65,7 @@ export default function FiltersBar(props) {
         <>
           <Button
             variant="dark"
-            className="button-filter"
+            className="button-filter button"
             type="button"
             data-testid="All-category-filter"
             onClick={ () => onClickFilter('') }
@@ -75,7 +75,7 @@ export default function FiltersBar(props) {
           {categories.map((cat) => (
             <Button
               variant="dark"
-              className="button-filter"
+              className="button-filter button"
               type="button"
               key={ cat.strCategory }
               data-testid={ `${cat.strCategory}-category-filter` }
