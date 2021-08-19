@@ -61,7 +61,7 @@ export default function FiltersBar(props) {
 
   return (
     <section className="container-buttons-filter">
-      { categories.length > 0 ? (
+      { categories.length > 0 && (
         <>
           <Button
             variant="dark"
@@ -83,7 +83,7 @@ export default function FiltersBar(props) {
             >
               {cat.strCategory}
             </Button>))}
-        </>) : <p>Carregando...</p>}
+        </>)}
     </section>
   );
 }

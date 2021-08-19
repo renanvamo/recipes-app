@@ -1,10 +1,7 @@
-* {
-  max-height: 640px;
-  max-width: 360px;
-}
-
 body {
   background-color: #ff900d;
+  max-height: 640px;
+  /* max-width: 360px; */
 }
 
 .container-login {
@@ -57,10 +54,21 @@ body {
 
 .container-buttons {
   display: block;
-  margin-top: 100px;
+  margin-top: 220px;
+}
+
+.container-profile {
+  display: block;
+  margin-top: 150px;
+  text-align: center;
+}
+
+.container-profile div {
+  margin: 50px auto; 
 }
 
 .button-style {
+  background-color: #4b2c0d;
   display: block;
   margin: 10px auto;
   width: 200px;
@@ -68,6 +76,7 @@ body {
 
 /* stackoverflow https://bityli.com/3bN5N */
 .button-filter {
+  background-color: #4b2c0d;
   font-size: 15px;
   height: 40px;
   line-height: 1em;
@@ -78,9 +87,18 @@ body {
 }
 
 .container-explore-by-area {
-  margin-top: 70px;
+  background: #ff900d;
+  padding: 10px;
+  position: fixed;
+  text-align: center;
+  top: 60px;
+  width: 100%;
+  z-index: 1;
 }
 
+/* .container-explore-by-area-buttons {
+  margin: 10px;
+} */
 
 .meals > .logo {
   animation: shake 1.5s infinite ease;
