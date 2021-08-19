@@ -34,8 +34,8 @@ body {
 }
 
 .card-favor-and-done {
-  box-shadow: 0 0 5px;
   background-color: white;
+  box-shadow: 0 0 5px;
   display: flex;
   flex-direction: column;
   float: none;
@@ -43,7 +43,7 @@ body {
   margin: 20px auto;
   padding: 2px;
   width: 304px;
-};
+}
 
 .container-login {
   display: flex;
@@ -91,7 +91,3 @@ header {
   justify-content: space-between;
   padding: 20px;
 }
-
-meals > .logo {
-  animation: shake 1.5s infinite ease;
-} 
