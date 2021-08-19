@@ -1,10 +1,18 @@
 * {
-  max-height: 640px;
   max-width: 360px;
 }
 
 body {
   background-color: #ff900d;
+  min-height: 640px;
+}
+
+.button {
+  background-color: #4b2c0d;
+}
+
+.transition {
+  transition: 0.5s;
 }
 
 .card-favor-and-done {
