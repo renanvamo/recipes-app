@@ -7,8 +7,38 @@ body {
   background-color: #4b2c0d;
 }
 
+.buttons-filter-favor {
+  display: flex;
+  justify-content: center;
+  margin: 50px 30px;
+}
+
+.button-style {
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+}
+
+.button-favAndDone {
+  background-color: #4b2c0d;
+  border: 1px solid #4b2c0d;
+  color: white;
+}
+
 .transition {
   transition: 0.5s;
+}
+
+.card-favor-and-done {
+  background-color: white;
+  box-shadow: 0 0 5px;
+  display: flex;
+  flex-direction: column;
+  float: none;
+  justify-content: space-between;
+  margin: 20px auto;
+  padding: 2px;
+  width: 304px;
 }
 
 .container-login {
@@ -21,35 +51,7 @@ body {
 .meals {
   align-items: center;
   background: #0fa36b;
-  color: #464646;
-  display: flex;
-  flex-direction: column;
-  font-family: sans-serif;
-  height: 100vh;
-  justify-content: center;
-  width: 100%;
-}
-
-.rocksGlass {
-  animation: shake 1s infinite ease;
   max-height: 80vh;
-}
-
-.container-header-filters {
-  background: #ff900d;
-  padding: 0 0 10px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.container-header {
-  align-items: center;
-  background: #f76c05;
-  display: flex;
-  padding: 10px;
-  width: 100%;
 }
 
 .container-buttons-filter {
@@ -139,4 +141,9 @@ body {
   100% {
     transform: rotate(-10deg);
   }
-}
+
+/* header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+} */
