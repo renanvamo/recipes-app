@@ -8,13 +8,8 @@ body {
   min-height: 640px;
 }
 
-.image-recipe {
-  width: 100%;
-  border-radius: 20px 20px 0 0;
-}
-
 .button {
-  background-color: #4B2C0D;
+  background-color: #4b2c0d;
 }
 
 .transition {
