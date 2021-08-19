@@ -68,7 +68,7 @@ export default function CardsListByIngredient() {
   };
 
   return (
-    <div style={ { position: 'relative' } }>
+    <div style={ { position: 'relative', top: '75px' } }>
       { imge.map((e, i) => (
         <button
           style={ {
