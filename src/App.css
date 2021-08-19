@@ -11,6 +11,24 @@ body {
   background-color: #4b2c0d;
 }
 
+.buttons-filter-favor {
+  display: flex;
+  justify-content: center;
+  margin: 50px 30px;
+}
+
+.button-style {
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+}
+
+.button-favAndDone {
+  background-color: #4b2c0d;
+  border: 1px solid #4b2c0d;
+  color: white;
+}
+
 .transition {
   transition: 0.5s;
 }
@@ -52,17 +70,6 @@ body {
   margin-top: 100px;
 }
 
-.buttons-filter-favor {
-  display: flex;
-  justify-content: center;
-  margin: 50px 30px;
-}
-
-.button-style {
-  display: block;
-  margin: 10px auto;
-  width: 200px;
-}
 
 /* stackoverflow https://bityli.com/3bN5N */
 .button-filter {

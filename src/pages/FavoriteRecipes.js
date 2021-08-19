@@ -29,7 +29,7 @@ export default function FavoriteRecipes() {
 
   return (
     <>
-      <Header title="Receitas Favoritas"/>
+      <Header title="Receitas Favoritas" />
       <ToggleButtonGroup
         className="buttons-filter-favor"
         type="radio"
@@ -41,7 +41,8 @@ export default function FavoriteRecipes() {
           name="type"
           data-testid="filter-by-all-btn"
           value="all"
-          variant="dark"
+          className="button-favAndDone"
+          variant="warning"
         >
           All
         </ToggleButton>
@@ -49,7 +50,8 @@ export default function FavoriteRecipes() {
           name="type"
           data-testid="filter-by-food-btn"
           value="comida"
-          variant="dark"
+          className="button-favAndDone"
+          variant="warning"
         >
           Food
         </ToggleButton>
@@ -57,7 +59,8 @@ export default function FavoriteRecipes() {
           name="type"
           data-testid="filter-by-drink-btn"
           value="bebida"
-          variant="dark"
+          className="button-favAndDone"
+          variant="warning"
         >
           Drink
         </ToggleButton>
