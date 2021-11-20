@@ -1,4 +1,4 @@
-# Recipe App
+# Recipes App
 
 Bem vindos ao repositório do projeto `Recipes App`. 
 
